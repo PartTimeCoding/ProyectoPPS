@@ -1,5 +1,3 @@
-import banner from '../assets/banner_upscale.png';
-
 const WhatsAppIcon = ({ size = 18, ...props }) => (
   <svg
     aria-label="WhatsApp"
@@ -15,7 +13,7 @@ const WhatsAppIcon = ({ size = 18, ...props }) => (
   </svg>
 );
 
-export default function Home() {
+export default function Catalogo() {
   const handleSolicitar = (plan) => {
     const numeroVentas = "50496730717"; // Reemplazar con el número de WhatsApp de ventas
     const mensaje = `Hola TEVISAT, estoy interesado/a en contratar el plan "${plan}". Me gustaría recibir más información.`;
@@ -25,14 +23,6 @@ export default function Home() {
 
   return (
     <div className="grow w-full">
-      <div className="w-full bg-blue-900">
-        <img
-          src={banner}
-          alt="Tevisat - Conexión Total para toda la familia"
-          className="w-full h-auto object-cover"
-        />
-      </div>
-
       <div className="bg-white border-b border-gray-200 py-12 px-4 text-center">
         <h1 className="text-4xl font-extrabold text-gray-900 mb-4">
           Nuestro Catálogo de Planes
@@ -43,6 +33,7 @@ export default function Home() {
         </p>
       </div>
 
+      {/* Sección de Tarjetas */}
       <div className="max-w-6xl mx-auto py-12 px-4">
         <div className="grid md:grid-cols-3 lg:grid-cols-4 gap-8 items-start">
           {/*Tarjeta 1*/}
@@ -60,9 +51,7 @@ export default function Home() {
               <li className="flex items-center gap-2">
                 ✓ 100 Mbps Fibra Óptica
               </li>
-              <li className="flex items-center gap-2">
-                ✓ ONU Doble Banda
-              </li>
+              <li className="flex items-center gap-2">✓ ONU Doble Banda</li>
               <li className="flex items-center gap-2">✓ Incluye Caja HD TV</li>
             </ul>
             <button

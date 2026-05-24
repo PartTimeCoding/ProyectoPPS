@@ -1,0 +1,18 @@
+services:
+  mysql-tevisat:
+    image: mysql:8.0
+    container_name: db_tevisat
+    restart: unless-stopped
+    ports:
+      - "3306:3306"
+    environment:
+      MYSQL_ROOT_PASSWORD: admin
+      MYSQL_DATABASE: tevisat_db
+      MYSQL_USER: tevisat_admin
+      MYSQL_PASSWORD: admin
+      TZ: America/Tegucigalpa
+    volumes:
+      - tevisat_data:/var/lib/mysql
+
+volumes:
+  tevisat_data:
